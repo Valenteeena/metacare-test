@@ -31,10 +31,19 @@ const Navigation = () => {
               <HStack align={"center"}>
                 <Box h="60px" w="4"></Box>
                 <VStack align="start" spacing={0}>
-                  <Text fontSize="14px" color="#060213" fontWeight="700">
+                  <Text
+                    fontSize="14px"
+                    color="#060213"
+                    fontWeight="700"
+                    fontFamily="Gelion Regular"
+                  >
                     Metacare
                   </Text>
-                  <Text color="#696D8C" fontSize="12px">
+                  <Text
+                    color="#696D8C"
+                    fontSize="12px"
+                    fontFamily="Gelion Regular"
+                  >
                     adeyinka@metacare.app
                   </Text>
                 </VStack>

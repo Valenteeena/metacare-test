@@ -1,13 +1,19 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import React from "react";
+import Efficiency from "./Efficiency";
 
 const TabMenu = () => {
   return (
     <Tabs w="full">
-      <TabList borderBottom="1px solid #ECEBF5" px="4">
+      <TabList
+        borderBottom="1px solid #ECEBF5"
+        px="4"
+        fontFamily="Gelion Regular"
+      >
         <Tab
           outline="none"
           _active={{ color: "black", borderColor: "#6837EF" }}
+          fontFamily="Gelion Regular"
         >
           Efficiency
         </Tab>
@@ -16,9 +22,9 @@ const TabMenu = () => {
         <Tab>Backlog</Tab>
       </TabList>
 
-      <TabPanels>
+      <TabPanels px="6">
         <TabPanel>
-          <p>one!</p>
+          <Efficiency />
         </TabPanel>
         <TabPanel>
           <p>two!</p>
