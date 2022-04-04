@@ -1,6 +1,9 @@
 export const AvgResponseOptions = {
   chart: {
     type: "line",
+    toolbar: {
+      show: false,
+    },
   },
   dataLabels: {
     enabled: false,
@@ -30,6 +33,9 @@ export const AvgResponseSeries = [
 export const AvgResOptions = {
   chart: {
     type: "line",
+    toolbar: {
+      show: false,
+    },
   },
   dataLabels: {
     enabled: false,
@@ -59,6 +65,9 @@ export const AvgResSeries = [
 export const RepliesOptions = {
   chart: {
     type: "line",
+    toolbar: {
+      show: false,
+    },
   },
   dataLabels: {
     enabled: false,
@@ -88,6 +97,9 @@ export const RepliesSeries = [
 export const AvgContactOptions = {
   chart: {
     type: "line",
+    toolbar: {
+      show: false,
+    },
   },
   dataLabels: {
     enabled: false,
