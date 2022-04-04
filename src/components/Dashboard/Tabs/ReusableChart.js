@@ -13,8 +13,14 @@ import { InboxIcon } from "../../../Icons/Icons";
 import Card from "./Card";
 import Chart from "react-apexcharts";
 
-const ReusableChart = ({ title, data, cardInfo, priorityColor }) => {
-  console.log(data);
+const ReusableChart = ({
+  title,
+  data,
+  series,
+  cardInfo,
+  priorityColor,
+  sub,
+}) => {
   return (
     <HStack
       border="1px solid #ECEBF5"
@@ -23,11 +29,11 @@ const ReusableChart = ({ title, data, cardInfo, priorityColor }) => {
       my="6"
       spacing="4"
       align="start"
-      height="350px"
-      maxHeight="300px"
+      height="360px"
+      maxHeight="360px"
     >
       <Box w="80%">
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" mb="6">
           <HStack>
             <Heading fontSize="18px" fontFamily="Gelion Regular">
               {title || "Average response Time"}
@@ -62,17 +68,14 @@ const ReusableChart = ({ title, data, cardInfo, priorityColor }) => {
             </Button>
           </HStack>
         </HStack>
-        <Chart
-          options={data}
-          series={[12, 18, 30, 50, 19, 41, 33, 48]}
-          type="line"
-          // width="500"
-          height="250"
-        />
+        <Chart options={data} series={series} type="line" height="250" />
       </Box>
       <Divider orientation="vertical" />
       <VStack spacing="6">
-        <Card cardTitle={title || "Average response Time"} time="30 Mins" />
+        <Card
+          cardTitle={sub || title || "Average response Time"}
+          time="30 Mins"
+        />
         <Card cardTitle={"Response Time"} time="1 Hour 30 Mins" />
       </VStack>
     </HStack>

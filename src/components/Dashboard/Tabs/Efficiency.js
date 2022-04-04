@@ -15,7 +15,16 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import ReusableChart from "./ReusableChart";
-import { AvgResponseOptions } from "../../../data/DataExport";
+import {
+  AvgContactOptions,
+  AvgContactSeries,
+  AvgResOptions,
+  AvgResponseOptions,
+  AvgResponseSeries,
+  AvgResSeries,
+  RepliesOptions,
+  RepliesSeries,
+} from "../../../data/DataExport";
 const Efficiency = () => {
   return (
     <Box>
@@ -84,7 +93,36 @@ const Efficiency = () => {
           </Button>
         </HStack>
       </HStack>
-      <ReusableChart data={AvgResponseOptions} />
+      <ReusableChart
+        data={AvgResponseOptions}
+        series={AvgResponseSeries}
+        priorityColor="#F05D23"
+        title="Average response Time"
+      />
+
+      <ReusableChart
+        data={RepliesOptions}
+        series={RepliesSeries}
+        priorityColor="#3E68FF"
+        title="Replies per resolution"
+        sub="Average Replies"
+      />
+
+      <ReusableChart
+        data={AvgResOptions}
+        series={AvgResSeries}
+        priorityColor="#FB6491"
+        title="Average resolution time"
+        sub="Average Resolution Rate"
+      />
+
+      <ReusableChart
+        data={AvgContactOptions}
+        series={AvgContactSeries}
+        priorityColor="#07C9E2"
+        title="First contact resolution rate"
+        sub="Average Contact Rate"
+      />
     </Box>
   );
 };
